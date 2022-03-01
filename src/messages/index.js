@@ -1,17 +1,20 @@
 export const ERROR_TECNICO = "Error tecnico.";
 export const NON_EXISTENT_RECORD = "El registro no existe o ya fue eliminado.";
+export const SUCCESSFULLY_QUERY = "Consulta realizada con exito.";
 
-export const productMessages = {
+export const getMessages = (entityName) => ({
   succes: {
-    CREATE: "Producto creado.",
-    UPDATE: "Producto actualizado.",
-    DELETE: "Producto eliminado.",
+    GET: "Consulta Exitosa",
+    GET_ALL: "Consulta Exitosa",
+    CREATE: `Registro de ${entityName} creado.`,
+    UPDATE: `Registro de ${entityName} actualizado.`,
+    DELETE: `Registro de ${entityName} eliminado.`,
   },
   error: {
-    CREATE: "Error al crear el producto",
-    GET: "Error al obtener el producto",
-    GET_ALL: "Error al obtener productos",
-    UPDATE: "Error al actualizar el producto",
-    DELETE: "Error al eliminar el producto",
+    CREATE: `Error al crear ${entityName}`,
+    GET: `Error al obtener ${entityName}`,
+    GET_ALL: `Error al obtener ${entityName}`,
+    UPDATE: `Error al actualizar ${entityName}`,
+    DELETE: `Error al eliminar ${entityName}`,
   },
-};
+});
